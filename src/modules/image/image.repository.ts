@@ -13,7 +13,7 @@ export class ImageRepository {
   ) {}
 
   public async create(dto: BaseImageReqDto): Promise<BaseImageResDto> {
-    return await this.imageModel.create({ ...dto });
+    return this.imageModel.create({ ...dto });
   }
 
   public async getById(id: string): Promise<BaseImageResDto> {

@@ -16,6 +16,6 @@ export class CommentController {
     @Param('imageId', ParseUUIDPipe) imageId: string,
     @Body() dto: CreateCommentReqDto,
   ): Promise<CommentResDto> {
-    return await this.commentService.addToImage(dto, imageId, userData.id);
+    return this.commentService.addToImage(dto, imageId, userData.id);
   }
 }

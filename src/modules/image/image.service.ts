@@ -41,7 +41,7 @@ export class ImageService {
 
     fs.writeFileSync(savePath, image.buffer);
 
-    return await this.imageRepository.create({
+    return this.imageRepository.create({
       ...dto,
       url: `/static/${uniqueName}`,
       portfolio_id: portfolioId,

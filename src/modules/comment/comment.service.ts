@@ -13,6 +13,6 @@ export class CommentService {
     imageId: string,
     userId: string,
   ): Promise<CommentResDto> {
-    return await this.commentRepository.addToImage(dto, imageId, userId);
+    return this.commentRepository.addToImage(dto, imageId, userId);
   }
 }

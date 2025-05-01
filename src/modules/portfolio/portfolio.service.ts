@@ -21,7 +21,7 @@ export class PortfolioService {
     dto: BasePortfolioReqDto,
     userId: string,
   ): Promise<BasePortfolioResDto> {
-    return await this.portfolioRepository.create(dto, userId);
+    return this.portfolioRepository.create(dto, userId);
   }
 
   public async getAllWithImages(): Promise<PortfolioImageResDto[]> {

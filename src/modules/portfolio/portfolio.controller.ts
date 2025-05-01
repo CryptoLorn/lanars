@@ -29,7 +29,7 @@ export class PortfolioController {
     @CurrentUser() userData: IUserData,
     @Body() dto: BasePortfolioReqDto,
   ): Promise<BasePortfolioResDto> {
-    return await this.portfolioService.create(dto, userData.id);
+    return this.portfolioService.create(dto, userData.id);
   }
 
   @SkipAuth()

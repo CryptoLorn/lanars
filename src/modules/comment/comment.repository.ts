@@ -17,7 +17,7 @@ export class CommentRepository {
     imageId: string,
     userId: string,
   ): Promise<CommentResDto> {
-    return await this.commentModel.create({
+    return this.commentModel.create({
       text: dto.text,
       image_id: imageId,
       user_id: userId,
